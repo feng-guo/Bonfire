@@ -4,6 +4,14 @@ body{
   margin:0;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
 h3 {
   font-family: 'Raleway', sans-serif;
   position: absolute;
@@ -89,8 +97,28 @@ h3 span {
   padding: 25px;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 50;
+}
+
 .box{
-  background-color: #e0e0e0;
-  padding: 10px;
+  background-color: #eceff1;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 10px;
+}
+
+#notice{
+  flex: 50;
+}
+
+#map{
+  flex-grow: 50;
 }
