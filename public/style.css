@@ -61,12 +61,18 @@ h3 {
 }
 
 .icon {
-  margin-left: 25px;
-  margin-right: 10px;
+  /*margin-left: 10px;
+  margin-right: 10px;*/
+  display: block;
+    margin: auto;
+    width: 100%;
 }
 
 .title{
   color: white;
+  margin: auto;
+  width: 35%;
+  margin-bottom: 20px;
 }
 
 #logout {
@@ -153,12 +159,29 @@ small{
 }
 
 #center{
-  margin: auto;
-  width: 100px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
 }
 
 #signinicon{
   margin-top: 60%;
+}
+
+#signinform {
+  margin: auto;
+  width: 60%;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+input[type=submit] {
+  margin: auto;
+  width: 50%;
 }
 
 #signintxt{
