@@ -5,7 +5,7 @@ body{
 }
 
 .background {
-  background-image: url("startpictures/gagePark.jpg");
+  background-image: url("startpictures/gagePark.png");
   width: 1200px;
   height: 900px;
 }
@@ -29,7 +29,7 @@ h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: white;
-  background-image: url('startpictures/gagePark.jpg');
+  background-image: url('startpictures/gagePark.png');
   background-color: white;
   height:100vh;
   margin: 0;
@@ -41,7 +41,7 @@ h1, h2, h3 {
 }
 
 #middle::after {
-  background: url('startpictures/gagePark.jpg');
+  background: url('startpictures/gagePark.png');
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -71,9 +71,7 @@ h1, h2, h3 {
 }
 
 .icon {
-  /*margin-left: 10px;
-  margin-right: 10px;*/
-  display: block;
+    display: block;
     margin: auto;
     width: 100%;
 }
