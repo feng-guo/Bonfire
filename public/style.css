@@ -133,13 +133,14 @@ h1, h2, h3 {
 
 #notice{
   flex: 50;
-  height: 500px;
+  height: 600px;
   width: 430px;
   overflow-y: scroll;
 }
 
 #map{
   flex-grow: 50;
+  height: 600px;
 }
 
 /*Embedded map style*/
