@@ -59,11 +59,13 @@ app.post('/signup', (req, res, next) => {
 app.get('/signin', (req, res) => {
   if (req.user) {
     res.redirect('/dashboard')
+  } else if (req.query.failed) {
+    res.sendFile(__dirname + '/public/failedsignin.html')
   } else {
     res.sendFile(__dirname + '/public/signin.html')
   }
 });
-app.post('/signin', passport.authenticate('local', { successRedirect: '/dashboard', failureRedirect: '/failedsignin.html' }));
+app.post('/signin', passport.authenticate('local', { successRedirect: '/dashboard', failureRedirect: '/signin?failed=true' }));
 app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
