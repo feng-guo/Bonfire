@@ -1,4 +1,9 @@
 /* Banner */
+
+body{
+  margin:0;
+}
+
 #top {
   height : 20px;
   background-color: #005661;
