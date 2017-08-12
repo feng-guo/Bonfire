@@ -8,9 +8,12 @@ body{
   text-align: center;
 }
 
-.images {
-  width:98.7vw;
-  opacity: 0.6;
+/*.middle {
+sack
+}*/
+
+h1 {
+  font-family: 'Raleway', sans-serif;
 }
 
 h3 {
@@ -43,7 +46,6 @@ h3 {
 }
 
 #title{
-  font-family: 'Raleway', sans-serif;
   color: white;
 }
 
