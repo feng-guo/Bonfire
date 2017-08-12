@@ -1,4 +1,8 @@
 h1 {
-  <font>color:"red"</font>
+  color: red;
   font-family: 'Raleway', sans-serif;
+}
+
+.title {
+  margin: auto;
 }
