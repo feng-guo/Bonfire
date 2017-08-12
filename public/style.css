@@ -15,16 +15,17 @@ h1, h2, h3 {
 }
 
 h3 {
+  <font>color:"red"</font>
   font-family: 'Raleway', sans-serif;
-  position: absolute;
   margin: 50;
   bottom: 0;
-  width:100%;
+  width: 25%;
   padding: 10px;
   order: 5px solid green;
   margin: 0;
   border-style: solid;
   border-color: #ff0000 #0000ff;
+  text-align: center;
 }
 
 
