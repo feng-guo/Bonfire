@@ -51,7 +51,7 @@ h3 {
   align-items: center;
 }
 
-#icon {
+.icon {
   margin-left: 25px;
   margin-right: 10px;
 }
@@ -137,4 +137,13 @@ small{
   z-index: 40;
   bottom: 0;
   margin-bottom: -15px;
+}
+
+#signinbg{
+  background-color: #005661;
+}
+
+#center{
+  margin: auto;
+  width: 100px;
 }
