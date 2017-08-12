@@ -19,10 +19,16 @@ h1, h2 {
 h3 {
   font-family: 'Raleway', sans-serif;
   position: absolute;
-  margin: 0;
-  left: 0;
+  margin: 50;
   bottom: 0;
   width:100%;
+  padding: 10px;
+  order: 5px solid green;
+  margin: 0;
+  border-style: solid;
+  border-color: #ff0000 #0000ff;
+}
+
 
 #middle {
   font-family: 'Raleway', sans-serif;
@@ -30,6 +36,11 @@ h3 {
   color: white;
   background-image: url('startpictures/gagePark.jpg');
   height:100vh;
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  opacity: 0.6;
 }
 
 #top {
