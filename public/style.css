@@ -137,6 +137,9 @@ h1, h2, h3 {
 
 #notice{
   flex: 50;
+  height: 500px;
+  width: 430px;
+  overflow-y: scroll;
 }
 
 #map{
@@ -239,6 +242,7 @@ input[type=submit]:hover {
   margin-right: 0px;
   width: 50%;
 }
+
 #signup:hover{
   background-color: #4fb3be;
   -webkit-transition: all 500ms ease;
@@ -246,16 +250,4 @@ input[type=submit]:hover {
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
-}
-
-.middle {
-  text-align: center;
-}
-.images {
-  width:98.7vw;
-  opacity: 0.6;
-}
-h3 {
-  font-family: 'Raleway', sans-serif;
-  color: white;
 }
