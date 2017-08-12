@@ -4,6 +4,11 @@ body{
   margin:0;
 }
 
+h1{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
 #top {
   height : 20px;
   background-color: #005661;
@@ -21,4 +26,16 @@ body{
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+#icon {
+  margin-left: 25px;
+}
+
+#logout {
+  font-family: 'Raleway', sans-serif;
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  
 }
