@@ -56,7 +56,7 @@ h3 {
   margin-right: 10px;
 }
 
-#title{
+.title{
   color: white;
 }
 
@@ -146,4 +146,8 @@ small{
 #center{
   margin: auto;
   width: 100px;
+}
+
+#signinicon{
+  margin-top: 60%;
 }
