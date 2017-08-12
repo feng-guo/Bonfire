@@ -30,12 +30,20 @@ h1{
 
 #icon {
   margin-left: 25px;
+  margin-right: 10px;
 }
 
 #logout {
   font-family: 'Raleway', sans-serif;
-  background-color: red;
+  text-decoration: none;
   color: white;
   padding: 10px 15px;
-  
+  margin-right: 15px;
+  margin-left: auto;
+}
+#logout:hover{
+  background-color: #4fb3be;
+}
+#logout:active{
+  background-color: #005661;
 }
