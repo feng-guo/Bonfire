@@ -105,7 +105,7 @@ h3 span {
 .column{
   display: flex;
   flex-direction: column;
-  flex-grow: 50;
+  flex: 50;
 }
 
 .box{
@@ -116,7 +116,6 @@ h3 span {
 }
 
 #notice{
-  flex: 50;
 }
 
 #map{
