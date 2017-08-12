@@ -18,8 +18,10 @@
       </div>
     </div>
     <div id="content">
-      <h1>Dashboard</h1>
-      <button v-on:click="getLocation" v-if="hasGeolocation">Centre at Current Location</button>
+      <div class="row" id="dashbrdrow">
+        <h1>Dashboard</h1>
+        <button id="centerbtn" v-on:click="getLocation" v-if="hasGeolocation">Centre at Current Location</button>
+      </div>
       <div class="row">
         <div id="notice"class="box">
           <h2>Community Notice</h2>
