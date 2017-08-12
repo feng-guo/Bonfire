@@ -14,17 +14,18 @@ h1, h2, h3 {
 }
 
 h3 {
+  <font>color:"red"</font>
   font-family: 'Raleway', sans-serif;
-  position: absolute;
   margin: 50;
   bottom: 0;
-  width:100%;
+  width: 25%;
   padding: 10px;
   line-height: 200px;
   height: 200px;
   order: 5px solid green;
   border-style: solid;
   border-color: #ff0000 #0000ff;
+  text-align: center;
 }
 
 
@@ -175,13 +176,26 @@ small{
 input {
     padding: 5px;
     margin: 5px;
+    margin-left: 0px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
 }
 
 input[type=submit] {
-  margin: auto;
+  font-family: 'Raleway', sans-serif;
   width: 50%;
 }
 
-#signintxt{
- no
+#signup{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  margin: 5px;
+  margin-right: 0px;
+  background-color: white;
+  width: 50%;
 }
