@@ -15,6 +15,67 @@
         <h1 id="title">Map Watchers</h1>
         <a id="logout" href="/logout">Logout</a>
       </div>
+      <div id="app">
+        <form method="post" action="/reddit/post">
+          <textarea name="description" placeholder="Description"></textarea>
+          <input type="text" name="x" placeholder="Longitude" :value="x" />
+          <input type="text" name="y" placeholder="Latitude" :value="y" />
+          <input type="submit" />
+        </form>
+        <div v-for="post in posts" v-if="posts">
+          <p>
+            {{post.description}}
+          </p>
+          <p>
+            {{post.x}}, {{post.y}}
+          </p>
+          <p>
+            Points: {{ post.upvotes }}
+          </p>
+          <a :href="`/reddit/posts/${post._id}/upvote`">Upvote</a>
+          <a :href="`/reddit/posts/${post._id}/downvote`">Downvote</a>
+        </div>
+        <h1 v-else>Loading...</h1>
+      </div>
     </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        posts: null,
+        x: null,
+        y: null
+      },
+      created() {
+        if ("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition(position => {
+            this.x = position.coords.longitude;
+            this.y = position.coords.latitude;
+            axios.get('/posts', {
+              params: {
+                minx: position.coords.longitude - 0.02,
+                miny: position.coords.latitude - 0.02,
+                maxx: position.coords.longitude + 0.02,
+                maxy: position.coords.latitude + 0.02
+              }
+            })
+            .then(res => this.posts = res.data)
+          })
+        }
+      },
+      methods: {
+        upvote(post) {
+          console.log(post);
+          axios.post('/upvote', { post })
+        },
+        downvote(post) {
+          axios.post('/downvote', { post })
+        }
+      }
+    })
+
+    </script>
   </body>
 </html>

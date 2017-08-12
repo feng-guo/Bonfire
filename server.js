@@ -81,13 +81,13 @@ app.get('/dashboard', (req, res) => {
     res.redirect('/signin')
   }
 })
-app.get('/posts', (req, res, next) => posts.find({ x: { $gte: req.query.minx, $lte: req.query.maxx }, y: { $gte: req.query.miny, $lte: req.query.maxy } }, (err, doc) => {
+app.get('/posts', (req, res, next) => posts.find({ x: { $gte: parseFloat(req.query.minx), $lte: parseFloat(req.query.maxx) }, y: { $gte: parseFloat(req.query.miny), $lte: parseFloat(req.query.maxy) } }, (err, doc) => {
   if (err) {
     return next(err)
   }
   res.send(doc)
 }))
-app.post('/posts', (req, res, next) => posts.insert(Object.assign({ user: req.user._id, created: new Date(), upvotes: 0 }, req.body), (err, doc) => {
+app.post('/posts', (req, res, next) => posts.insert(Object.assign({ user: req.user._id, created: new Date(), upvotes: 0 }, req.body, { x: parseFloat(req.body.x), y: parseFloat(req.body.y) }), (err, doc) => {
   if (err) {
     return next(err)
   }
@@ -104,6 +104,24 @@ app.post('/posts/:post/downvote', (req, res, next) => posts.update({ _id: req.pa
     return next(err)
   }
   res.send(doc)
+}))
+app.post('/reddit/post', (req, res) => posts.insert(Object.assign({ user: req.user._id, created: new Date(), upvotes: 0 }, req.body, { x: parseFloat(req.body.x), y: parseFloat(req.body.y) }), (err, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.redirect('/reddit.html')
+}))
+app.get('/reddit/posts/:post/upvote', (req, res, next) => posts.update({ _id: req.params.post }, { $inc: { upvotes: 1 } }, { returnUpdatedDocs: true }, (err, _, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.redirect('/reddit.html')
+}))
+app.get('/reddit/posts/:post/downvote', (req, res, next) => posts.update({ _id: req.params.post }, { $inc: { upvotes: -1 } }, { returnUpdatedDocs: true }, (err, _, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.redirect('/reddit.html')
 }))
 app.listen(port)
 
