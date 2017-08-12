@@ -22,10 +22,6 @@ h1, h2, h3 {
   height:100vh;
 }
 
-#navbar {
-  margin-bottom: 0px;
-}
-
 #top {
   height : 20px;
   background-color: #005661;
