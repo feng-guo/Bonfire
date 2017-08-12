@@ -1,25 +1,29 @@
 /* Banner */
-
+/**/
 body{
   margin:0;
 }
 
 .background {
   background-image: url("startpictures/gagePark.jpg");
-  width: 1200px;
-  height: 900px;
-}
-h1, h2, h3 {
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
 }
 
-#middle {
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: white;
-  background-image: url('startpictures/gagePark.jpg');
-  height:100vh;
+  z-index: 20;
+  margin-left: 100px;
+  margin-top: 100px;
+  display: block;
 }
 
 #top {
