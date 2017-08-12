@@ -4,18 +4,29 @@ body{
   margin:0;
 }
 
-.middle {
+h3 {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  color: black;
   text-align: center;
+}
+
+/*.middle {
+
+}*/
+
+h3 span {
+   color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0);
+   padding: 10px;
 }
 
 .images {
   width:98.7vw;
-  opacity: 0.6;
-}
-
-h3 {
-  font-family: 'Raleway', sans-serif;
-  color: white;
+  /*opacity: 0.6;*/
+  position: relative;
 }
 
 #top {
