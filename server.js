@@ -54,7 +54,7 @@ app.post('/signup', (req, res, next) => {
 })
 app.get('/signin', (req, res) => res.sendFile(__dirname + '/public/signin.html'));
 app.post('/signin',
-  passport.authenticate('local', { failureRedirect: '/signin' }),
+  passport.authenticate('local', { failureRedirect: '/failedsignin.html' }),
   (req, res) => res.redirect('/dashboard.html'));
 app.get('/logout', (req, res) => {
   req.logout();
