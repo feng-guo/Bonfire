@@ -10,6 +10,10 @@ const users = new Datastore({
   filename: 'data/users.db',
   autoload: true
 })
+const posts = new Datastore({
+  filename: 'data/posts.db',
+  autoload: true
+})
 passport.use(new LocalStrategy((username, password, done) => {
     users.findOne({ username }, (err, user) => {
       if (err) { return done(err); }
@@ -77,6 +81,30 @@ app.get('/dashboard', (req, res) => {
     res.redirect('/signin')
   }
 })
+app.get('/posts', (req, res, next) => posts.find({ x: { $gte: req.query.minx, $lte: req.query.maxx }, y: { $gte: req.query.miny, $lte: req.query.maxy } }, (err, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.send(doc)
+}))
+app.post('/posts', (req, res, next) => posts.insert(Object.assign({ user: req.user._id, created: new Date(), upvotes: 0 }, req.body), (err, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.send(doc)
+}))
+app.post('/posts/:post/upvote', (req, res, next) => posts.update({ _id: req.params.post }, { $inc: { upvotes: 1 } }, { returnUpdatedDocs: true }, (err, _, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.send(doc)
+}))
+app.post('/posts/:post/downvote', (req, res, next) => posts.update({ _id: req.params.post }, { $inc: { upvotes: -1 } }, { returnUpdatedDocs: true }, (err, _, doc) => {
+  if (err) {
+    return next(err)
+  }
+  res.send(doc)
+}))
 app.listen(port)
 
 console.log(`Open localhost:${port} in your browser`);
