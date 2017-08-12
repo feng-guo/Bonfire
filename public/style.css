@@ -16,17 +16,13 @@ h1, h2, h3 {
 
 #introText {
   color: black;
+  background-color: white;
   font-family: 'Raleway', sans-serif;
-  position: absolute;
-  margin: 50;
-  bottom: 0;
-  width:100%;
+  margin: 50px;
   padding: 10px;
   line-height: 200px;
   height: 200px;
-  order: 5px solid green;
-  border-style: solid;
-  border-color: black;
+  text-decoration: none;
 }
 
 #middle {
