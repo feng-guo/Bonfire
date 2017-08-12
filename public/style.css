@@ -4,10 +4,7 @@ body{
   margin:0;
 }
 
-h1{
-  font-family: 'Raleway', sans-serif;
-  color: white;
-}
+
 
 #top {
   height : 20px;
@@ -33,6 +30,11 @@ h1{
   margin-right: 10px;
 }
 
+#title{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
 #logout {
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
@@ -56,4 +58,14 @@ h1{
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+#content{
+  padding: 25px;
+}
+
+.box{
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin: 10px;
 }
