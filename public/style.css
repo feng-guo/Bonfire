@@ -4,10 +4,7 @@ body{
   margin:0;
 }
 
-h1{
-  font-family: 'Raleway', sans-serif;
-  color: white;
-}
+
 
 #top {
   height : 20px;
@@ -30,23 +27,60 @@ h1{
 
 #icon {
   margin-left: 25px;
+  margin-right: 10px;
+}
+
+#title{
+  font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
 #logout {
   font-family: 'Raleway', sans-serif;
-  background-color: red;
+  text-decoration: none;
   color: white;
   padding: 10px 15px;
-
+  margin-right: 15px;
+  margin-left: auto;
 }
+
 .middle {
   text-align: center;
 }
+
 .images {
   width:98.7vw;
   opacity: 0.6;
 }
+
 h3 {
   font-family: 'Raleway', sans-serif;
   color: white;
+}
+
+#logout:hover{
+  background-color: #4fb3be;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+#logout:active{
+  background-color: #005661;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#content{
+  padding: 25px;
+}
+
+.box{
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin: 10px;
 }
