@@ -19,25 +19,24 @@
     </div>
     <div id="content">
       <h1>Dashboard</h1>
+      <button v-on:click="getLocation" v-if="hasGeolocation">Centre at Current Location</button>
       <div class="row">
         <div id="notice"class="box">
           <h2>Community Notice</h2>
-          <div id="app">
-            <table v-if="proposals">
-              <tr>
-                <th v-for="field in proposals.fields">
-                  {{ field.alias }}
-                </th>
-              </tr>
-              <tr v-for="row in proposals.features">
-                <td v-for="column in row.attributes">
-                  {{ column }}
-                </td>
-              </tr>
-              </tr>
-            </table>
-            <h1 v-else>Loading...</h1>
-          </div>
+          <table v-if="proposals">
+            <tr>
+              <th v-for="field in proposals.fields">
+                {{ field.alias }}
+              </th>
+            </tr>
+            <tr v-for="row in proposals.features">
+              <td v-for="column in row.attributes">
+                {{ column }}
+              </td>
+            </tr>
+            </tr>
+          </table>
+          <h1 v-else>Loading...</h1>
         </div>
         <div id="map"class="box">
           <h2>Your Area</h2>
