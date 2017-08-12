@@ -5,7 +5,6 @@ body{
 }
 
 .background {
-  background-image: url("startpictures/gagePark.jpg");
   width: 1200px;
   height: 900px;
 }
@@ -21,8 +20,9 @@ h3 {
   bottom: 0;
   width:100%;
   padding: 10px;
+  line-height: 200px;
+  height: 200px;
   order: 5px solid green;
-  margin: 0;
   border-style: solid;
   border-color: #ff0000 #0000ff;
 }
@@ -61,11 +61,9 @@ h3 {
 }
 
 .icon {
-  /*margin-left: 10px;
-  margin-right: 10px;*/
   display: block;
-    margin: auto;
-    width: 100%;
+  margin: auto;
+  width: 100%;
 }
 
 .title{
