@@ -172,20 +172,68 @@ small{
 #signinform {
   margin: auto;
   width: 60%;
+  background-color: #005661;
 }
 
 input {
     padding: 5px;
     margin: 5px;
+    margin-left: 0px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    background-color: #005661;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #00838e;
+    border-color: #00838e;
+}
+input:hover{
+  border-bottom: 2px solid white;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 input[type=submit] {
-  margin: auto;
+  font-family: 'Raleway', sans-serif;
   width: 50%;
+  background-color: #00838e;
+  color: white;
+  border: none;
+  outline: none;
+}
+input[type=submit]:hover {
+  background-color: #4fb3be;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-#signintxt{
- no
+#signup{
+  font-family: 'Raleway', sans-serif;
+  font-size: 13.33px;
+  text-decoration: none;
+  background-color: #00838e;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5px;
+  margin: 5px;
+  margin-right: 0px;
+  width: 50%;
+}
+#signup:hover{
+  background-color: #4fb3be;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .middle {
