@@ -14,32 +14,45 @@ h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
 }
 
-h3 {
-  <font>color:"red"</font>
+#introText {
+  color: black;
   font-family: 'Raleway', sans-serif;
+  position: absolute;
   margin: 50;
   bottom: 0;
-  width: 25%;
+  width:100%;
   padding: 10px;
+  line-height: 200px;
+  height: 200px;
   order: 5px solid green;
-  margin: 0;
   border-style: solid;
-  border-color: #ff0000 #0000ff;
-  text-align: center;
+  border-color: black;
 }
-
 
 #middle {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: white;
   background-image: url('startpictures/gagePark.jpg');
+  background-color: white;
   height:100vh;
   margin: 0;
   left: 0;
   bottom: 0;
   width:100%;
-  opacity: 0.4;
+  display: block;
+  position: relative;
+}
+
+#middle::after {
+  background: url('startpictures/gagePark.jpg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
 }
 
 #top {
@@ -83,8 +96,6 @@ h3 {
   margin-right: 15px;
   margin-left: auto;
 }
-
-
 
 #logout:hover{
   background-color: #4fb3be;
@@ -166,8 +177,7 @@ small{
 }
 
 #signinicon{
-  margin-top: 20%;
-  margin-bottom: 20%;
+  margin-top: 60%;
 }
 
 #signinform {
