@@ -4,25 +4,19 @@ body{
   margin:0;
 }
 
-
 .background {
   background-image: url("startpictures/gagePark.jpg");
   width: 1200px;
   height: 900px;
-  opacity: 0.5;
-    }
+}
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
 }
 
 h3 {
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
   margin: 0;
-  left: 0;
-  bottom: 0;
-  width:100%;
+}
 
 #middle {
   font-family: 'Raleway', sans-serif;
@@ -150,4 +144,8 @@ small{
 
 #signinicon{
   margin-top: 60%;
+}
+
+#signintxt{
+  
 }
