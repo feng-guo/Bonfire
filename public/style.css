@@ -4,6 +4,14 @@ body{
   margin:0;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
 h3 {
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -94,8 +102,27 @@ h3 {
   padding: 25px;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  flex: 50;
+}
+
 .box{
-  background-color: #e0e0e0;
-  padding: 10px;
+  background-color: #eceff1;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 10px;
+}
+
+#notice{
+}
+
+#map{
+  flex-grow: 50;
 }
