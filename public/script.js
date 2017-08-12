@@ -16,6 +16,10 @@ var app = new Vue({
       }
     })
     .then(res => this.proposals = res.data)
+    .then(() => this.proposals.features = this.proposals.features.map(feature => {
+      feature.attributes.DATE_RECEI = new Date(feature.attributes.DATE_RECEI).toISOString()
+      return feature
+    }))
   },
   methods: {
     getLocation() {
@@ -35,6 +39,10 @@ var app = new Vue({
           }
         })
         .then(res => this.proposals = res.data)
+        .then(() => this.proposals.features = this.proposals.features.map(feature => {
+          feature.attributes.DATE_RECEI = new Date(feature.attributes.DATE_RECEI).toISOString()
+          return feature
+        }))
       })
     }
   }
