@@ -14,32 +14,45 @@ h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
 }
 
-h3 {
-  <font>color:"red"</font>
+#introText {
+  color: black;
   font-family: 'Raleway', sans-serif;
+  position: absolute;
   margin: 50;
   bottom: 0;
-  width: 25%;
+  width:100%;
   padding: 10px;
+  line-height: 200px;
+  height: 200px;
   order: 5px solid green;
-  margin: 0;
   border-style: solid;
-  border-color: #ff0000 #0000ff;
-  text-align: center;
+  border-color: black;
 }
-
 
 #middle {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: white;
   background-image: url('startpictures/gagePark.jpg');
+  background-color: white;
   height:100vh;
   margin: 0;
   left: 0;
   bottom: 0;
   width:100%;
-  opacity: 0.4;
+  display: block;
+  position: relative;
+}
+
+#middle::after {
+  background: url('startpictures/gagePark.jpg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
 }
 
 #top {
@@ -62,17 +75,12 @@ h3 {
 }
 
 .icon {
-  /*margin-left: 10px;
-  margin-right: 10px;*/
-  display: block;
-    margin: auto;
-    width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .title{
   color: white;
-  margin: auto;
-  width: 35%;
   margin-bottom: 20px;
 }
 
@@ -167,24 +175,81 @@ small{
 }
 
 #signinicon{
-  margin-top: 60%;
+  display: block;
+  margin: auto;
+  width: 100%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+#signintxt{
+  margin: auto;
+  width: 35%;
 }
 
 #signinform {
   margin: auto;
   width: 60%;
+  background-color: #005661;
 }
 
 input {
     padding: 5px;
     margin: 5px;
+    margin-left: 0px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    background-color: #005661;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #00838e;
+    border-color: #00838e;
+}
+input:hover{
+  border-bottom: 2px solid white;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 input[type=submit] {
-  margin: auto;
+  font-family: 'Raleway', sans-serif;
   width: 50%;
+  background-color: #00838e;
+  color: white;
+  border: none;
+  outline: none;
+}
+input[type=submit]:hover {
+  background-color: #4fb3be;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-#signintxt{
- no
+#signup{
+  font-family: 'Raleway', sans-serif;
+  font-size: 13.33px;
+  text-decoration: none;
+  background-color: #00838e;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5px;
+  margin: 5px;
+  margin-right: 0px;
+  width: 50%;
+}
+#signup:hover{
+  background-color: #4fb3be;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
